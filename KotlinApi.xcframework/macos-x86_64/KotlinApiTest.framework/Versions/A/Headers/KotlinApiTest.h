@@ -153,6 +153,22 @@ __attribute__((swift_name("ApplicationApi")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Greeting")))
+@interface KATGreeting : KATBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (NSString *)greeting __attribute__((swift_name("greeting()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Platform")))
+@interface KATPlatform : KATBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@property (readonly) NSString *platform __attribute__((swift_name("platform")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Response")))
 @interface KATResponse : KATBase
 - (instancetype)initWithStatus:(NSString *)status __attribute__((swift_name("init(status:)"))) __attribute__((objc_designated_initializer));
