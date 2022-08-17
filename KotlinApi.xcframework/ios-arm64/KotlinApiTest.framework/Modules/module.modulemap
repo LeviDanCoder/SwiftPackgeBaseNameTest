@@ -1,0 +1,8 @@
+framework module KotlinApiTest {
+    umbrella header "KotlinApiTest.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}
